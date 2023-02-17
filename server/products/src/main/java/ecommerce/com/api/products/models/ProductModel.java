@@ -22,7 +22,7 @@ public class ProductModel {
     private Long id; // id definido acima
     private String nomeProd;
     private String marca;
+    private String tipoProd;
+    private String tamanhos;
     private Float preco;
-    private String tipo;
-    private String[] tamanhos;
 }

@@ -1,5 +1,7 @@
 package ecommerce.com.api.products.service;
 
+import javax.print.event.PrintEvent;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,15 +27,16 @@ public class ProductService {
     
     //Método para cadastrar produtos
     public ResponseEntity<?> cadastrar(ProductModel pm){
-        if(pm.getNomeProd()==""){
+        
+        if(pm.getNomeProd()=="" || pm.getNomeProd()==null){
             rm.setMessage("O nome do produto é obrigatório. \n");
             return new ResponseEntity<PostModel>(rm, HttpStatus.BAD_REQUEST);
         }
-        if(pm.getTipo()==""){
+        if(pm.getTipoProd()=="" || pm.getTipoProd()==null){
             rm.setMessage("O tipo do produto é obrigatório. \n");
             return new ResponseEntity<PostModel>(rm, HttpStatus.BAD_REQUEST);
         }
-        if(pm.getMarca()==""){
+        if(pm.getMarca()=="" || pm.getMarca()==null){
             rm.setMessage("A marca do produto é obrigatória. \n");
             return new ResponseEntity<PostModel>(rm, HttpStatus.BAD_REQUEST);
         }

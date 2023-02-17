@@ -23,5 +23,6 @@ public class ProductModel {
     private String nomeProd;
     private String marca;
     private Float preco;
+    private String tipo;
     private String[] tamanhos;
 }

@@ -19,7 +19,7 @@ public class ProductModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id; // id definido acima
     private String nomeProd;
     private String marca;
     private Float preco;

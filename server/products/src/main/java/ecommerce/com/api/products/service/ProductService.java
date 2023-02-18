@@ -50,4 +50,11 @@ public class ProductService {
 
     }
 
+    public ResponseEntity<PostModel> remover(long codigo){
+
+        pr.deleteById(codigo);
+        rm.setMessage("Produto removido com sucesso");
+
+        return new ResponseEntity<PostModel>(rm,HttpStatus.OK);
+    }
 }
